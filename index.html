@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="centerDiv">
+        <div class="card">
+            <marquee behavior="fast" direction="right">
+                <p>Welcome <span> to the Fizz Buzz System</span></p>
+            </marquee>
+            <h1>Fizz Buzz System</h1>
+            <input type="number" placeholder="Enter Number" id="inputValue">
+            <button onclick="FizzBuzzSystem()">Check</button>
+            <div id="Result"></div>
+        </div>
+        <script>
+            var fizz=new Audio('./ehnn ehnn.mp3');
+            var fizzBuzz=new Audio('./slide.mp3');
+            var songinvalid = new Audio('./buzzer-or-wrong-answer-20582 (1).mp3')
+            function FizzBuzzSystem(){
+                var userinput= document.getElementById("inputValue").value;
+                if (userinput =="") {
+                    // Result.innerHTML=""
+                    Result.innerHTML ="Enter a Fizz or Buzz number ⚡ ";
+                    songinvalid.play()
+                }
+               else if ((userinput % 3 == 0) && (userinput % 5 == 0)){
+                    Result.innerHTML="FIZZ BUZZ 🤙";
+                    fizzBuzz.play();
+                } 
+                else if(userinput % 3 == 0) {
+                    Result.innerHTML="FIZZ 👍";
+                    fizzBuzz.play();
+                }
+                else if(userinput % 5 == 0) {
+                    Result.innerHTML="BUZZ 👍";
+                    fizzBuzz.play();
+                }else{
+                    Result.innerHTML=" the number you enter is not a fizz or Buzz number 🙄";
+                    fizz.play()
+                }
+            }
+        </script>
+</body>
+</html>
