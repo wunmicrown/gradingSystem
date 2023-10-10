@@ -11,12 +11,17 @@
   height: 100vh;
   justify-content: center;
   display: flex;
-  background: linear-gradient( rgb(173,49,122),rgb(239,102,77), rgb(239,102,255),rgb(15,120,115));
+  background: linear-gradient(
+    rgb(173, 49, 122),
+    rgb(239, 102, 77),
+    rgb(239, 102, 255),
+    rgb(15, 120, 115)
+  );
 }
 
 .card {
   margin-top: 250px;
-  background:transparent;
+  background: transparent;
   width: 100%;
   padding-top: 50px;
   max-width: 400px;
@@ -55,24 +60,39 @@
 }
 
 .centerDiv #Result {
-    font-size: 24px;
-    font-weight: 700;
+  font-size: 24px;
+  font-weight: 700;
   max-width: 100%;
-  margin: 20px 50px 20px 50px;
+  margin: 20px 20px 20px 20px;
   border-radius: 10px;
   padding: 20px 20px 20px 20px;
   background-color: white;
 }
-@media  (max-width:769px){
-    .card {
-        margin: 150px 30px 100px 30px;
-        background:transparent;
-        width: 100%;
-        padding-top: 50px;
-        max-width: 500px;
-        height: 60vh;
-        justify-content: center;
-        border-radius: 10px;
-        box-shadow: 1px 1px 2px 2px;
-      }
+@media (max-width: 500px) {
+  .centerDiv h1 {
+    font-size: 30px;
+    font-weight: 700;
+    padding-top: 10px;
+  }
+  .card {
+    margin: 150px 30px 100px 30px;
+    background: transparent;
+    width: 100%;
+    padding-top: 50px;
+    max-width: 500px;
+    height: 50vh;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 2px;
+  }
+  .centerDiv #Result {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffff;
+    max-width: 100%;
+    margin: 15px 20px 20px 20px;
+    border-radius: 10px;
+    padding: 20px 20px 20px 20px;
+    background-color: #23b4c9;
+  }
 }

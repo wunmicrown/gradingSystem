@@ -25,23 +25,30 @@
                 var userinput= document.getElementById("inputValue").value;
                 if (userinput =="") {
                     // Result.innerHTML=""
-                    Result.innerHTML ="Enter a Fizz or Buzz number ⚡ ";
-                    songinvalid.play()
+                    Result.innerHTML ="Enter a vailid number ⚡ ";
+                    Result.style.color="red";
+                    songinvalid.play();
                 }
                else if ((userinput % 3 == 0) && (userinput % 5 == 0)){
                     Result.innerHTML="FIZZ BUZZ 🤙";
                     fizzBuzz.play();
+                    Result.style.color="Green";
                 } 
                 else if(userinput % 3 == 0) {
                     Result.innerHTML="FIZZ 👍";
                     fizzBuzz.play();
+                    Result.style.color="Green";
                 }
                 else if(userinput % 5 == 0) {
                     Result.innerHTML="BUZZ 👍";
                     fizzBuzz.play();
+                    Result.style.color="Green";
                 }else{
-                    Result.innerHTML=" the number you enter is not a fizz or Buzz number 🙄";
-                    fizz.play()
+                    fizz.play();
+                    Result.style.color="red";
+                    Result.textContent="number not valid 🙄";
+
+                    
                 }
             }
         </script>
